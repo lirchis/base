@@ -119,41 +119,41 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-<!--        &lt;!&ndash; 配置需要生成代码的数据库表 &ndash;&gt;-->
-<!--        <table tableName="base_key_val" domainObjectName="BaseKeyVal"-->
-<!--               enableCountByExample="true" enableUpdateByExample="true"-->
-<!--               enableDeleteByExample="true" enableSelectByExample="true"-->
-<!--               selectByExampleQueryId="true" delimitIdentifiers="true">-->
+        <!-- 配置需要生成代码的数据库表 -->
+        <table tableName="base_key_val" domainObjectName="BaseKeyVal"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true" delimitIdentifiers="true">
 
-<!--            &lt;!&ndash; 指定是否只生成 domain 类，默认为 false；-->
-<!--            如果设置为 true，则只生成 domain 类，如果还配置了sqlMapGenerator，那么-->
-<!--            在 mapper.xml 文件中，只生成 resultMap 元素 &ndash;&gt;-->
-<!--            <property name="modelOnly" value="false"/>-->
+            <!-- 指定是否只生成 domain 类，默认为 false；
+            如果设置为 true，则只生成 domain 类，如果还配置了sqlMapGenerator，那么
+            在 mapper.xml 文件中，只生成 resultMap 元素 -->
+            <property name="modelOnly" value="false"/>
 
-<!--            &lt;!&ndash; 默认为 false；如果设置为 true，生成的 model 类会直接使用 column 本身的名字，而不会再使用驼峰命名方法，-->
-<!--            比如 CREATE_DATE，生成的属性名字就是 CREATE_DATE,而不会是 createDate &ndash;&gt;-->
-<!--            <property name="useActualColumnNames" value="false"/>-->
+            <!-- 默认为 false；如果设置为 true，生成的 model 类会直接使用 column 本身的名字，而不会再使用驼峰命名方法，
+            比如 CREATE_DATE，生成的属性名字就是 CREATE_DATE,而不会是 createDate -->
+            <property name="useActualColumnNames" value="false"/>
 
-<!--            &lt;!&ndash;  生成主键的方法，如果设置了该元素，MBG 会在生成的 <insert> 元素中生成一条正确的 <selectKey> 元素 &ndash;&gt;-->
-<!--            <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
-<!--        </table>-->
+            <!--  生成主键的方法，如果设置了该元素，MBG 会在生成的 <insert> 元素中生成一条正确的 <selectKey> 元素 -->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
 
-<!--        <table tableName="user" domainObjectName="User"-->
-<!--               enableCountByExample="true" enableUpdateByExample="true"-->
-<!--               enableDeleteByExample="true" enableSelectByExample="true"-->
-<!--               selectByExampleQueryId="true" delimitIdentifiers="true">-->
+        <table tableName="user" domainObjectName="User"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true" delimitIdentifiers="true">
 
-<!--            &lt;!&ndash; 指定是否只生成 domain 类，默认为 false；-->
-<!--            如果设置为 true，则只生成 domain 类，如果还配置了sqlMapGenerator，那么-->
-<!--            在 mapper.xml 文件中，只生成 resultMap 元素 &ndash;&gt;-->
-<!--            <property name="modelOnly" value="false"/>-->
+            <!-- 指定是否只生成 domain 类，默认为 false；
+            如果设置为 true，则只生成 domain 类，如果还配置了sqlMapGenerator，那么
+            在 mapper.xml 文件中，只生成 resultMap 元素 -->
+            <property name="modelOnly" value="false"/>
 
-<!--            &lt;!&ndash; 默认为 false；如果设置为 true，生成的 model 类会直接使用 column 本身的名字，而不会再使用驼峰命名方法，-->
-<!--            比如 CREATE_DATE，生成的属性名字就是 CREATE_DATE,而不会是 createDate &ndash;&gt;-->
-<!--            <property name="useActualColumnNames" value="false"/>-->
+            <!-- 默认为 false；如果设置为 true，生成的 model 类会直接使用 column 本身的名字，而不会再使用驼峰命名方法，
+            比如 CREATE_DATE，生成的属性名字就是 CREATE_DATE,而不会是 createDate -->
+            <property name="useActualColumnNames" value="false"/>
 
-<!--            &lt;!&ndash;  生成主键的方法，如果设置了该元素，MBG 会在生成的 <insert> 元素中生成一条正确的 <selectKey> 元素 &ndash;&gt;-->
-<!--            <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
-<!--        </table>-->
+            <!--  生成主键的方法，如果设置了该元素，MBG 会在生成的 <insert> 元素中生成一条正确的 <selectKey> 元素 -->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
     </context>
 </generatorConfiguration>
