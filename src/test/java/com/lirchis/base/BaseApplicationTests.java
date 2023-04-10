@@ -1,7 +1,9 @@
 package com.lirchis.base;
 
-import com.lirchis.base.entity.BaseKeyVal;
-import com.lirchis.base.service.BaseKeyValService;
+
+import com.lirchis.base.mapper.BaseKeyValMapper;
+import com.lirchis.base.mapper.UserMapper;
+import com.lirchis.base.model.BaseKeyVal;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,12 +11,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class BaseApplicationTests {
     @Autowired
-    BaseKeyValService baseKeyValService;
+    UserMapper userMapper;
+    @Autowired
+    BaseKeyValMapper baseKeyValMapper;
     @Test
-    void contextLoads() {
-        String key = "a";
-        BaseKeyVal baseKeyVal = baseKeyValService.getByKey(key);
-        System.out.println(baseKeyVal.getVal());
+    void test(){
+        System.out.println(userMapper.selectByPrimaryKey(1).toString());
+        System.out.println(baseKeyValMapper.selectByPrimaryKey(1).toString());
     }
-
 }
